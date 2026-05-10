@@ -6,6 +6,7 @@ def main() -> None:
  
  print("experimental feature - task 1")
  print("exp feature - task 2")
+ print("exp feature - task 2: bug fix")
 
 if __name__ == '__main__':
  main()
