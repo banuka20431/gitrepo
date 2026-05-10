@@ -11,6 +11,8 @@ def main() -> None:
 def some_function() -> int:
  return 0
 
+def some_new_function() -> float:
+ return .5
 
 if __name__ == '__main__':
  main()

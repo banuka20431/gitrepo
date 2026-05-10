@@ -1,0 +1,36 @@
+# See https://pre-commit.com/hooks.html for more hooks
+default_stages: [pre-commit, commit-msg]
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: fix-byte-order-marker
+      - id: mixed-line-ending
+      - id: name-tests-test
+      - id: no-commit-to-branch
+
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v4.4.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+
+  - repo: https://github.com/streetsidesoftware/cspell-cli
+    rev: v10.0.0
+    hooks:
+      - id: cspell
+
+  - repo: https://github.com/PyCQA/doc8
+    rev: v2.0.0
+    hooks:
+      - id: doc8
+        args:
+          - "--max-line-length"
+          - "112"
+          - "--file-encoding"
+          - "utf-8"
